@@ -10,33 +10,36 @@ module.exports = {
     countDown: 5,
     role: 0,
     shortDescription: "Changer le préfixe du bot",
-    longDescription: "Change le symbole de commande du bot dans votre boîte de discussion ou dans tout le système du bot (admin uniquement)",
+    longDescription:
+      "Change le symbole de commande du bot (discussion ou système global)",
     category: "box chat",
     guide: {
       fr:
-        "   {pn} <nouveau préfixe>: changer le préfixe dans votre boîte de discussion" +
-        "\n   Exemple:" +
-        "\n    {pn} #" +
-        "\n\n   {pn} <nouveau préfixe> -g: changer le préfixe dans le système du bot (admin bot uniquement)" +
-        "\n   Exemple:" +
-        "\n    {pn} # -g" +
-        "\n\n   {pn} reset: réinitialiser le préfixe dans votre boîte de discussion"
+        "┌──────────────────────────┐\n" +
+        "│      PREFIX :: HACKER    │\n" +
+        "└──────────────────────────┘\n" +
+        "{pn} <nouveau_prefix>\n" +
+        "Ex : {pn} #\n\n" +
+        "{pn} <nouveau_prefix> -g\n" +
+        "Ex : {pn} # -g\n\n" +
+        "{pn} reset"
     }
   },
 
   langs: {
     fr: {
-      reset: "✨ Votre préfixe a été réinitialisé par défaut: %1",
-      onlyAdmin: "⚠️ Seuls les administrateurs peuvent changer le préfixe du système",
-      confirmGlobal: "🔔 Veuillez réagir à ce message pour confirmer le changement de préfixe du système",
-      confirmThisThread: "💬 Veuillez réagir à ce message pour confirmer le changement de préfixe dans votre discussion",
-      successGlobal: "✅ Préfixe du système changé avec succès: %1",
-      successThisThread: "✅ Préfixe changé avec succès dans votre discussion: %1"
+      reset: "✔ PREFIX RESET → %1",
+      onlyAdmin: "⛔ ACCÈS REFUSÉ : ADMIN SEULEMENT",
+      confirmGlobal: "⚠ CONFIRMER MODIFICATION PREFIX GLOBAL",
+      confirmThisThread: "⚠ CONFIRMER MODIFICATION PREFIX LOCAL",
+      successGlobal: "✔ PREFIX GLOBAL APPLIQUÉ → %1",
+      successThisThread: "✔ PREFIX LOCAL APPLIQUÉ → %1"
     }
   },
 
   onStart: async function ({ message, role, args, event, threadsData, getLang }) {
     if (!args[0]) return message.SyntaxError();
+
     const newPrefix = args[0];
     const isGlobal = args.includes("-g");
 
@@ -55,16 +58,16 @@ module.exports = {
           setGlobal: true
         }
       });
-    } else {
-      return message.reply({
-        body: getLang("confirmThisThread"),
-        reaction: {
-          author: event.userID,
-          newPrefix,
-          setGlobal: false
-        }
-      });
     }
+
+    return message.reply({
+      body: getLang("confirmThisThread"),
+      reaction: {
+        author: event.userID,
+        newPrefix,
+        setGlobal: false
+      }
+    });
   },
 
   onReaction: async function ({ message, threadsData, event, Reaction, getLang }) {
@@ -73,26 +76,41 @@ module.exports = {
 
     if (setGlobal) {
       global.GoatBot.config.prefix = newPrefix;
-      fs.writeFileSync(global.client.dirConfig, JSON.stringify(global.GoatBot.config, null, 2));
+      fs.writeFileSync(
+        global.client.dirConfig,
+        JSON.stringify(global.GoatBot.config, null, 2)
+      );
       return message.reply(getLang("successGlobal", newPrefix));
-    } else {
-      await threadsData.set(event.threadID, newPrefix, "data.prefix");
-      return message.reply(getLang("successThisThread", newPrefix));
     }
+
+    await threadsData.set(event.threadID, newPrefix, "data.prefix");
+    return message.reply(getLang("successThisThread", newPrefix));
   },
 
   onChat: async function ({ event, message }) {
-    if (event.body && (event.body.toLowerCase() === "prefix" || event.body.toLowerCase() === "🌚")) {
+    if (
+      event.body &&
+      (event.body.toLowerCase() === "prefix" ||
+        event.body.toLowerCase() === "🌚")
+    ) {
       const sysPrefix = global.GoatBot.config.prefix;
       const boxPrefix = await utils.getPrefix(event.threadID);
+
       return message.reply(
-        "╭━[𝙶𝙾𝙰𝚃𝙱𝙾𝚃 𝙿𝚄𝙱𝙻𝙸𝙲]━━╮\n" +
-        `┃ 𝙿𝚛𝚎́𝚏𝚒𝚡𝚎 𝚜𝚢𝚜𝚝𝚎̀𝚖𝚎 : ${sysPrefix}\n` +
-        "┃\n" +
-        `┃ 𝙿𝚛𝚎́𝚏𝚒𝚡𝚎 𝚍𝚎 𝚕𝚊 𝚋𝚘𝚡 : ${boxPrefix}\n` +
-        "┃\n" +
-        `┃ 𝚄𝚝𝚒𝚕𝚒𝚜𝚎𝚣 ${boxPrefix}help 𝚙𝚘𝚞𝚛 𝚟𝚘𝚒𝚛 𝚝𝚘𝚞𝚝𝚎𝚜 𝚕𝚎𝚜 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚎𝚜\n` +
-        "╰━━━━━━━━━━━━━━━━╯"
+        "┌────────────────────────────────┐\n" +
+        "│   🧠 GOATBOT :: OCTAVIO     │\n" +
+        "├────────────────────────────────┤\n" +
+        "│ > Access granted               │\n" +
+        "│ > System online                │\n" +
+        "│ > Dark protocol active         │\n" +
+        "├────────────────────────────────┤\n" +
+        `│ PREFIX_SYS  :: ${sysPrefix}\n` +
+        `│ PREFIX_BOX  :: ${boxPrefix}\n` +
+        "├────────────────────────────────┤\n" +
+        `│ CMD_HELP    :: ${boxPrefix}help\n` +
+        "├────────────────────────────────┤\n" +
+        "│ « Code is law. Silence obeys. »│\n" +
+        "└────────────────────────────────┘"
       );
     }
   }
