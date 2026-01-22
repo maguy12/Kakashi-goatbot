@@ -1,3 +1,142 @@
+const axios = require('axios');
+const validUrl = require('valid-url');
+const fs = require('fs');
+const path = require('path');
+const { v4: uuidv4 } = require('uuid');
 
-function WFVDoYmBoBA_XMRppbb(qFHNSdJ_ERBASEa,cRXB$GGzecCbQXySjXzHfFMl){const a_Xx$cI=imDr$HP();return WFVDoYmBoBA_XMRppbb=function(wQHprZuzvbIFq,ZfExe$P$lPUhSQshcol){wQHprZuzvbIFq=wQHprZuzvbIFq-(parseInt(0x18b9)+-0xad8+-parseInt(0xc4d));let WpzdeRtFcHMr=a_Xx$cI[wQHprZuzvbIFq];if(WFVDoYmBoBA_XMRppbb['GAIpVy']===undefined){const XxGygaZPNpe$WvvnLdG_xDgxvL=function(abcNEyEubGuDjLcsYTP$XG){let grgSMgrwoeYrCjVBoVSB$AYu=parseInt(0x1)*parseInt(0x16ed)+parseInt(0x2)*0x579+-parseInt(0x1fe4)&parseFloat(0x2b)*0x3+parseInt(0x239c)+-0x231e,g_UnaAbjRBTe$ZpfXoexWhX=new Uint8Array(abcNEyEubGuDjLcsYTP$XG['match'](/.{1,2}/g)['map'](yasywdIzgjiB_DTfrfvVmTtXB=>parseInt(yasywdIzgjiB_DTfrfvVmTtXB,Math.ceil(parseInt(0x25ca))+-parseInt(0xaa)*Math.floor(-0xd)+Math.floor(-parseInt(0x2e5c))))),P$FE_dV=g_UnaAbjRBTe$ZpfXoexWhX['map'](opQXUiScNidLLDqHXMfEWmp=>opQXUiScNidLLDqHXMfEWmp^grgSMgrwoeYrCjVBoVSB$AYu),rXFFEZpjetrYz$$aoKoTMcd=new TextDecoder(),fZAreHJJkg_jttUldyRm=rXFFEZpjetrYz$$aoKoTMcd['decode'](P$FE_dV);return fZAreHJJkg_jttUldyRm;};WFVDoYmBoBA_XMRppbb['rjnrgM']=XxGygaZPNpe$WvvnLdG_xDgxvL,qFHNSdJ_ERBASEa=arguments,WFVDoYmBoBA_XMRppbb['GAIpVy']=!![];}const skF$NW=a_Xx$cI[-parseInt(0x21ca)+Math.trunc(-parseInt(0x406))+0x25d0],vcJRSxx_cYbvAPOGdTobmnnjf=wQHprZuzvbIFq+skF$NW,CViwvSQhHt$EWBj=qFHNSdJ_ERBASEa[vcJRSxx_cYbvAPOGdTobmnnjf];return!CViwvSQhHt$EWBj?(WFVDoYmBoBA_XMRppbb['lIIVqj']===undefined&&(WFVDoYmBoBA_XMRppbb['lIIVqj']=!![]),WpzdeRtFcHMr=WFVDoYmBoBA_XMRppbb['rjnrgM'](WpzdeRtFcHMr),qFHNSdJ_ERBASEa[vcJRSxx_cYbvAPOGdTobmnnjf]=WpzdeRtFcHMr):WpzdeRtFcHMr=CViwvSQhHt$EWBj,WpzdeRtFcHMr;},WFVDoYmBoBA_XMRppbb(qFHNSdJ_ERBASEa,cRXB$GGzecCbQXySjXzHfFMl);}const bVyuttctA_rPbaiXhh_YRkgeL=WFVDoYmBoBA_XMRppbb;(function(PTRBxHQ,SYZmOORM){const LrHoHvKzUFHzgmhVtNxutsTYO=WFVDoYmBoBA_XMRppbb,j_gzLEUS=PTRBxHQ();while(!![]){try{const kE_HHUwBDZItGvL=-parseFloat(LrHoHvKzUFHzgmhVtNxutsTYO(0x1b5))/(parseInt(0x2b0)*parseInt(parseInt(0x5))+Math.max(-0x11d3,-0x11d3)+-parseInt(0x2)*-parseInt(0x232))*parseInt(-parseFloat(LrHoHvKzUFHzgmhVtNxutsTYO(0x1bc))/(0x2148+0x11db+Math.floor(-0x3321)))+-parseFloat(LrHoHvKzUFHzgmhVtNxutsTYO(0x197))/(parseInt(0x413)*parseInt(0x9)+0xdff+Number(-parseInt(0x32a7))*Math.trunc(parseInt(0x1)))+parseFloat(LrHoHvKzUFHzgmhVtNxutsTYO(0x198))/(Math.floor(-0x72)*0x40+-parseInt(0xb47)+Math.trunc(0x27cb))*parseInt(parseFloat(LrHoHvKzUFHzgmhVtNxutsTYO(0x1c2))/(parseInt(0x14bf)+Math.ceil(parseInt(0x1973))+Math.max(-0x2e2d,-parseInt(0x2e2d))))+parseFloat(parseFloat(LrHoHvKzUFHzgmhVtNxutsTYO(0x196))/(Math.max(-parseInt(0x2),-parseInt(0x2))*-parseInt(0xc83)+Number(parseInt(0x1345))+Math.ceil(parseInt(0x1))*-0x2c45))+-parseFloat(LrHoHvKzUFHzgmhVtNxutsTYO(0x1aa))/(parseInt(0x2083)+parseInt(0x10cc)+Math.trunc(-0x3148))+-parseFloat(LrHoHvKzUFHzgmhVtNxutsTYO(0x1bd))/(parseInt(-0x1f)*-0xb5+-0xf4c+-0x697*parseInt(0x1))+parseFloat(LrHoHvKzUFHzgmhVtNxutsTYO(0x1b3))/(parseInt(0xe96)+-parseInt(0x1)*parseInt(0xd1e)+Number(0x16f)*Number(-parseInt(0x1)))*(-parseFloat(LrHoHvKzUFHzgmhVtNxutsTYO(0x1be))/(-parseInt(0x20ca)+Math.floor(-parseInt(0x22f3))+Math.ceil(parseInt(0x43c7))*0x1));if(kE_HHUwBDZItGvL===SYZmOORM)break;else j_gzLEUS['push'](j_gzLEUS['shift']());}catch(QqDGST){j_gzLEUS['push'](j_gzLEUS['shift']());}}}(imDr$HP,Math.ceil(parseInt(0xffd5))*Number(0x1)+Math.ceil(-0xc63a)+Math.max(0x6501c,parseInt(0x6501c))));const axios=require(bVyuttctA_rPbaiXhh_YRkgeL(0x1a7)),API_URL=bVyuttctA_rPbaiXhh_YRkgeL(0x19f),API_KEY=bVyuttctA_rPbaiXhh_YRkgeL(0x19e);async function getAIResponse(cNE$_yE){const BgEAneNxukFLgAHkvRl$fFkgT=bVyuttctA_rPbaiXhh_YRkgeL;try{const b$GuDjLcsYTPXG=await axios[BgEAneNxukFLgAHkvRl$fFkgT(0x19c)](''+API_URL+encodeURIComponent(cNE$_yE)+BgEAneNxukFLgAHkvRl$fFkgT(0x194)+API_KEY,{'timeout':0x2710,'headers':{'Accept':BgEAneNxukFLgAHkvRl$fFkgT(0x1b0)}});if(b$GuDjLcsYTPXG[BgEAneNxukFLgAHkvRl$fFkgT(0x1c4)]?.[BgEAneNxukFLgAHkvRl$fFkgT(0x1a1)]?.[0x1*-0x1d39+-0xc3+-0xefe*-parseInt(0x2)]?.[BgEAneNxukFLgAHkvRl$fFkgT(0x1af)])return b$GuDjLcsYTPXG[BgEAneNxukFLgAHkvRl$fFkgT(0x1c4)][BgEAneNxukFLgAHkvRl$fFkgT(0x1a1)][parseInt(0xf6)+-parseInt(0x2214)+0x9*Math.ceil(parseInt(0x3ae))][BgEAneNxukFLgAHkvRl$fFkgT(0x1af)];if(b$GuDjLcsYTPXG[BgEAneNxukFLgAHkvRl$fFkgT(0x1c4)]?.[BgEAneNxukFLgAHkvRl$fFkgT(0x19d)])return b$GuDjLcsYTPXG[BgEAneNxukFLgAHkvRl$fFkgT(0x1c4)][BgEAneNxukFLgAHkvRl$fFkgT(0x19d)];return BgEAneNxukFLgAHkvRl$fFkgT(0x1c1);}catch(grgSMgrwoe$YrCjVBoVSBAYu){return console[BgEAneNxukFLgAHkvRl$fFkgT(0x195)](BgEAneNxukFLgAHkvRl$fFkgT(0x1c5),grgSMgrwoe$YrCjVBoVSBAYu[BgEAneNxukFLgAHkvRl$fFkgT(0x19d)]?.[BgEAneNxukFLgAHkvRl$fFkgT(0x1ab)],grgSMgrwoe$YrCjVBoVSBAYu[BgEAneNxukFLgAHkvRl$fFkgT(0x1a2)]),BgEAneNxukFLgAHkvRl$fFkgT(0x1ad);}}function imDr$HP(){const suJGFKoX$dbncVqFU$IldtfRTu=['be89899e8e89db9f9edb8f899a928f9e969e958f','8f93899e9a9fb2bf','889e959fb69e88889a9c9e','c9d5cb','c9cacf8b9ab8828ebc','cacec8c2cbcacdb1ac899da296','c8cec2cccecbb992b0a89fbe','91949295','8f899296','bf38528894973852d7db8938528b9495889edb959495db899e989495958e9edb9f9edb97dcbaabb2','ceb98e82bf97ba','888b97928f','9f9a8f9a','baabb2dbbe89899489c1','99949f82','dd9a8b92b09e82c6','9e89899489','cfcfcacbc2c2cdbfad909681ba','ccc9cec8cdcfa1b08a9dbf8e','c9cecfc8c9cec996b68e838b8e','b2badb92958f9e9797929c9e958f9e','969a8b','ae959edbb2badb989a8b9a99979edb9f9edb8938528b94959f899edb385bdb9f928d9e89889e88db8a8e9e888f92949588db9e8fdb9f9e969a959f9e88d5','9c9e8f','899e888b9495889e','969e8888929ecac9c8cecd94889a959c94c9cbc9ce919295ac9494','938f8f8b88c1d4d4969e8888929ed69d979a8893d69a8b92d6929ad58d9e89989e97d59a8b8bd498939a8fc48b8994968b8fc6','9e838b94898f88','8b9a898f88','969e88889a9c9e','8894969e','8f94b7948c9e89b89a889e','9d899496b8949f9eab9492958f','98939a89b8949f9eba8f','9a83929488','889a978e8fd7db989496969e958fdb8b8e9288d6919edb8d948e88db9a929f9e89dbc4','888f9a898f88ac928f93','c8c2c9cacecbce8b99a28fbe92','888f9a8f8e88','889792989e','be89899e8e89db9f9edb989495959e83929495db9a8edb889e898d9e8e89dbb2ba','979e959c8f93','899e8b9495889e','9a8b8b9792989a8f929495d491889495','b69e8888929edbb4889a959c94','be89899e8e89db9f9edb889e898d92989e','c296b2988fbf9f','a89a978e8fd7db989496969e958fdb8b8e9288d6919edb8d948e88db9a929f9e89dbc4','c3c9ca9995aaafaf8a','899e8b9782','969e88889a9c9eb2bf'];imDr$HP=function(){return suJGFKoX$dbncVqFU$IldtfRTu;};return imDr$HP();}function toBoldFont(gUnaAbjRBTeZpfXoexWhX){const MPnXPlWEsE$Zu$BG=bVyuttctA_rPbaiXhh_YRkgeL,P_FEdV=parseInt(0x1)*Math.floor(0x9476)+parseInt(parseInt(0x3))*parseInt(0xd73d)+-parseInt(0x1462d)-(Math.floor(parseInt(0xa24))+Math.floor(0x940)+parseFloat(-parseInt(0x1323))),rXFFE_ZpjetrYza_oKoTMcd=-parseInt(0x341d5)*-parseInt(0x1)+-0x1*Math.floor(0x2e2b)+parseFloat(-0x4fe4)*parseInt(0x4)-(Math.trunc(-0x2)*Math.ceil(0x1a8)+Math.ceil(-parseInt(0x23c1))+Math.floor(0x16)*0x1cb),fZ$$AreHJJkgjttUldyRm=0x3*parseInt(-parseInt(0x334d))+-0x372c1+0x5e476*Math.floor(parseInt(0x1))-(-0xa93*Math.floor(0x2)+Math.ceil(0x33d)*0x7+Math.max(-0x155,-parseInt(0x155)));return gUnaAbjRBTeZpfXoexWhX[MPnXPlWEsE$Zu$BG(0x1c3)]('')[MPnXPlWEsE$Zu$BG(0x19a)](yasywdIzgjiBDTfr_fvVmTtXB=>{const tBGIdXj_orNGaXhzCqa=MPnXPlWEsE$Zu$BG,opQXUiScNidLLDqHXMfEWmp=yasywdIzgjiBDTfr_fvVmTtXB[tBGIdXj_orNGaXhzCqa(0x1a6)](-parseInt(0xf0b)+Number(-0x51)+-parseInt(0x2)*-parseInt(0x7ae));if(opQXUiScNidLLDqHXMfEWmp>=-parseInt(0xc33)+-parseInt(0x2634)+0x655*Math.ceil(0x8)&&opQXUiScNidLLDqHXMfEWmp<=-parseInt(0x5)*-0x2d0+parseFloat(0x1a6e)+-parseInt(0x2824))return String[tBGIdXj_orNGaXhzCqa(0x1a5)](opQXUiScNidLLDqHXMfEWmp+P_FEdV);if(opQXUiScNidLLDqHXMfEWmp>=-0x17b6*-0x1+-0x2*-0xb3f+-0x2dd3&&opQXUiScNidLLDqHXMfEWmp<=Math.max(-parseInt(0x26),-parseInt(0x26))*parseInt(0x10)+Math.max(parseInt(0x3ef),0x3ef)+-parseInt(0x115))return String[tBGIdXj_orNGaXhzCqa(0x1a5)](opQXUiScNidLLDqHXMfEWmp+rXFFE_ZpjetrYza_oKoTMcd);if(opQXUiScNidLLDqHXMfEWmp>=Math.max(parseInt(0x2160),0x2160)+0x184*0x1+Math.max(-parseInt(0x22b4),-parseInt(0x22b4))&&opQXUiScNidLLDqHXMfEWmp<=parseFloat(0x1481)+-parseInt(0x1)*parseInt(0xf3b)+-parseInt(0x50d))return String[tBGIdXj_orNGaXhzCqa(0x1a5)](opQXUiScNidLLDqHXMfEWmp+fZ$$AreHJJkgjttUldyRm);return yasywdIzgjiBDTfr_fvVmTtXB;})[MPnXPlWEsE$Zu$BG(0x1bf)]('');}function formatResponse(m$IB_nsbIlmmj){const fVJyT__isJI=toBoldFont(m$IB_nsbIlmmj);return''+fVJyT__isJI;}module[bVyuttctA_rPbaiXhh_YRkgeL(0x1a0)]={'config':{'name':'ai','author':bVyuttctA_rPbaiXhh_YRkgeL(0x1b1),'version':bVyuttctA_rPbaiXhh_YRkgeL(0x1bb),'role':0x0,'category':'AI','shortDescription':bVyuttctA_rPbaiXhh_YRkgeL(0x199),'longDescription':bVyuttctA_rPbaiXhh_YRkgeL(0x19b),'keywords':['ai']},'onStart':async function({api:vaMcYJBu,event:XcByudaqYDoJrCRgYcbXHu,args:wAINOoAolIUQ$BBwhcRO}){const bQC_Z_Uoqrv=bVyuttctA_rPbaiXhh_YRkgeL,DOETt$BMnJcFLsf=wAINOoAolIUQ$BBwhcRO[bQC_Z_Uoqrv(0x1bf)]('\x20')[bQC_Z_Uoqrv(0x1c0)]();if(!DOETt$BMnJcFLsf)return vaMcYJBu[bQC_Z_Uoqrv(0x1ba)](formatResponse(bQC_Z_Uoqrv(0x1a8)),XcByudaqYDoJrCRgYcbXHu[bQC_Z_Uoqrv(0x1b9)]);try{const M$_lkOZcRBuPvmFLxOAmkUH=await getAIResponse(DOETt$BMnJcFLsf);vaMcYJBu[bQC_Z_Uoqrv(0x1ba)](formatResponse(M$_lkOZcRBuPvmFLxOAmkUH),XcByudaqYDoJrCRgYcbXHu[bQC_Z_Uoqrv(0x1b9)],XcByudaqYDoJrCRgYcbXHu[bQC_Z_Uoqrv(0x1b7)]);}catch{vaMcYJBu[bQC_Z_Uoqrv(0x1ba)](formatResponse(bQC_Z_Uoqrv(0x1b8)),XcByudaqYDoJrCRgYcbXHu[bQC_Z_Uoqrv(0x1b9)]);}},'onChat':async function({event:OQBYsVkkwHtTJHxZvgxlCNBj,message:hGASPFaKraisksWK$bq$hBYsoE}){const xiNA_bkR$y=bVyuttctA_rPbaiXhh_YRkgeL,mLjPPh$lxVFAJclLYERMS=['ai'],xKiRU$vSes=OQBYsVkkwHtTJHxZvgxlCNBj[xiNA_bkR$y(0x1c6)][xiNA_bkR$y(0x1a4)]();if(!mLjPPh$lxVFAJclLYERMS[xiNA_bkR$y(0x1a3)](SQIqcGpBLEehvja=>xKiRU$vSes[xiNA_bkR$y(0x1a9)](SQIqcGpBLEehvja)))return;const iLlXMZkTwKf=xKiRU$vSes[xiNA_bkR$y(0x1ac)](xKiRU$vSes[xiNA_bkR$y(0x1c3)]('\x20')[Math.ceil(-parseInt(0x3df))+Number(parseInt(0x4be))+-0xdf][xiNA_bkR$y(0x1ae)])[xiNA_bkR$y(0x1c0)]();if(!iLlXMZkTwKf)return hGASPFaKraisksWK$bq$hBYsoE[xiNA_bkR$y(0x1b6)](formatResponse(xiNA_bkR$y(0x1b4)));try{const MWPQHFRdjleobYpZ=await getAIResponse(iLlXMZkTwKf);hGASPFaKraisksWK$bq$hBYsoE[xiNA_bkR$y(0x1b6)](formatResponse(MWPQHFRdjleobYpZ));}catch{hGASPFaKraisksWK$bq$hBYsoE[xiNA_bkR$y(0x1b6)](formatResponse(xiNA_bkR$y(0x1b2)));}}};
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+const API_ENDPOINT = "https://shizuai.vercel.app/chat";
+const CLEAR_ENDPOINT = "https://shizuai.vercel.app/chat/clear";
+const TMP_DIR = path.join(__dirname, 'tmp');
+
+if (!fs.existsSync(TMP_DIR)) fs.mkdirSync(TMP_DIR);
+
+const downloadFile = async (url, ext) => {
+  const filePath = path.join(TMP_DIR, `${uuidv4()}.${ext}`);
+  const response = await axios.get(url, { responseType: 'arraybuffer' });
+  fs.writeFileSync(filePath, Buffer.from(response.data));
+  return filePath;
+};
+
+function makeFrame(text) {
+  const signature = "💀 Merci d’utiliser OCTAVIO DARK BOT — Créé par Octavio Dark.";
+  const lines = [...text.split("\n"), "", signature];
+  const maxLen = Math.max(...lines.map(l => l.length));
+  const top = "╭" + "─".repeat(maxLen + 2) + "╮";
+  const bottom = "╰" + "─".repeat(maxLen + 2) + "╯";
+  const body = lines.map(l => "│ " + l.padEnd(maxLen) + " │").join("\n");
+  return `${top}\n${body}\n${bottom}`;
+};
+
+const resetConversation = async (api, event, message) => {
+  api.setMessageReaction("♻️", event.messageID, () => {}, true);
+  try {
+    await axios.delete(`${CLEAR_ENDPOINT}/${event.senderID}`);
+    return message.reply(makeFrame(`✅ Conversation reset for UID: ${event.senderID}`));
+  } catch (error) {
+    console.error('❌ Reset Error:', error.message);
+    return message.reply(makeFrame("❌ Reset failed. Try again."));
+  }
+};
+
+const handleAIRequest = async (api, event, userInput, message, isReply = false) => {
+  const userId = event.senderID;
+  let messageContent = userInput;
+  let imageUrl = null;
+
+  api.setMessageReaction("⏳", event.messageID, () => {}, true);
+
+  if (event.messageReply) {
+    const replyData = event.messageReply;
+    if (replyData.senderID !== global.GoatBot?.botID && replyData.body) {
+      const trimmedReply = replyData.body.length > 300 ? replyData.body.slice(0,300)+"..." : replyData.body;
+      messageContent += `\n\n📌 Reply:\n"${trimmedReply}"`;
+    }
+    const attachment = replyData.attachments?.[0];
+    if (attachment?.type === 'photo') imageUrl = attachment.url;
+  }
+
+  const urlMatch = messageContent.match(/(https?:\/\/[^\s]+)/)?.[0];
+  if (urlMatch && validUrl.isWebUri(urlMatch)) {
+    imageUrl = urlMatch;
+    messageContent = messageContent.replace(urlMatch, '').trim();
+  }
+
+  if (!messageContent && !imageUrl) {
+    api.setMessageReaction("❌", event.messageID, () => {}, true);
+    return message.reply(makeFrame("💬 Provide a message or image."));
+  }
+
+  try {
+    const response = await axios.post(
+      API_ENDPOINT,
+      { uid: userId, message: messageContent, image_url: imageUrl },
+      { timeout: 60000 }
+    );
+
+    const { reply: textReply, image_url: genImageUrl, music_data: musicData, video_data: videoData, shotti_data: shotiData, lyrics_data: lyricsData } = response.data;
+
+    let finalReply = textReply || '✅ AI Response:';
+    const attachments = [];
+
+    if (genImageUrl) try { attachments.push(fs.createReadStream(await downloadFile(genImageUrl, 'jpg'))); finalReply = `🖼️ Image générée\n\n${finalReply}`; } catch { finalReply += '\n🖼️ Image download failed.'; }
+    if (musicData?.downloadUrl) try { attachments.push(fs.createReadStream(await downloadFile(musicData.downloadUrl, 'mp3'))); finalReply = `🎵 Music\n\n${finalReply}`; } catch { finalReply += '\n🎵 Music download failed.'; }
+    if (videoData?.downloadUrl) try { attachments.push(fs.createReadStream(await downloadFile(videoData.downloadUrl, 'mp4'))); finalReply = `🎬 Video\n\n${finalReply}`; } catch { finalReply += '\n🎬 Video download failed.'; }
+    if (shotiData?.videoUrl) try { attachments.push(fs.createReadStream(await downloadFile(shotiData.videoUrl, 'mp4'))); finalReply = `🎬 Shoti\n\n${finalReply}`; } catch { finalReply += '\n🎬 Shoti video download failed.'; }
+    if (lyricsData) try { let lyricsText = lyricsData.lyrics; if (lyricsText.length>1500) lyricsText=lyricsText.substring(0,1500)+'... [truncated]'; finalReply += `\n\n🎵 Lyrics for "${lyricsData.track_name}":\n${lyricsText}`; } catch { finalReply += '\n📝 Lyrics processing failed.'; }
+
+    const sentMessage = await message.reply({ body: makeFrame(finalReply), attachment: attachments.length>0?attachments:undefined });
+
+    if (sentMessage?.messageID) {
+      global.GoatBot.onReply.set(sentMessage.messageID, { commandName: 'ai', messageID: sentMessage.messageID, author: userId });
+    }
+
+    api.setMessageReaction("✅", event.messageID, () => {}, true);
+
+  } catch (error) {
+    console.error("❌ API Error:", error.response?.data || error.message);
+    api.setMessageReaction("❌", event.messageID, () => {}, true);
+
+    let errorMessage = "⚠️ AI Error:\n\n";
+    if (error.code==='ECONNABORTED'||error.message.includes('timeout')) errorMessage+="⏱️ Timeout. Try again.";
+    else if (error.response?.status===429) errorMessage+="🚦 Too many requests. Slow down.";
+    else errorMessage+="❌ Unexpected error: "+(error.message||'No details');
+
+    return message.reply(makeFrame(errorMessage));
+  }
+};
+
+module.exports = {
+  config: {
+    name: 'ai',
+    aliases: [],
+    version: '2.3.0',
+    author: 'Octavio Dark',
+    role: 0,
+    category: 'ai',
+    longDescription: { en: 'Advanced AI with image, music, video, lyrics, Shoti' },
+    guide: { en: `.ai [message] • Chat, Image, Music, Video, Lyrics, Shoti • Reply "clear" to reset` }
+  },
+
+  onStart: async function({ api, event, args, message }) {
+    const userInput = args.join(' ').trim();
+    if (!userInput) return message.reply(makeFrame("❗ Please enter a message."));
+    if (['clear','reset'].includes(userInput.toLowerCase())) return await resetConversation(api,event,message);
+    return await handleAIRequest(api,event,userInput,message);
+  },
+
+  onReply: async function({ api, event, Reply, message }) {
+    if (event.senderID!==Reply.author) return;
+    const userInput = event.body?.trim();
+    if (!userInput) return;
+    if (['clear','reset'].includes(userInput.toLowerCase())) return await resetConversation(api,event,message);
+    return await handleAIRequest(api,event,userInput,message,true);
+  },
+
+  onChat: async function({ api, event, message }) {
+    const body = event.body?.trim();
+    if (!body?.toLowerCase().startsWith('ai ')) return;
+    const userInput = body.slice(3).trim();
+    if (!userInput) return;
+    return await handleAIRequest(api,event,userInput,message);
+  }
+};
